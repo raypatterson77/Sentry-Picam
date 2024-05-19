@@ -56,7 +56,7 @@ func (c *Camera) startDayCamera() (io.ReadCloser, *exec.Cmd) {
 		"-fps", strconv.Itoa(*c.Fps),
 		"-ex", *c.ExposureMode,
 	)
-	cmd := exec.Command("raspivid", args...)
+	cmd := exec.Command("rpicam", args...)
 	stdOut, err := cmd.StdoutPipe()
 	h.CheckError(err)
 
@@ -69,7 +69,7 @@ func (c *Camera) startNightCamera() (io.ReadCloser, *exec.Cmd) {
 		"-fps", "0",
 		"-ex", "nightpreview",
 	)
-	cmd := exec.Command("raspivid", args...)
+	cmd := exec.Command("rpicam", args...)
 	stdOut, err := cmd.StdoutPipe()
 	h.CheckError(err)
 
