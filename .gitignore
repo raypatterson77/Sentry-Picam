@@ -4,7 +4,6 @@
 *.dll
 *.so
 *.dylib
-sentry-picam
 
 # Test binary, built with `go test -c`
 *.test
@@ -14,3 +13,6 @@ sentry-picam
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# binaries
+bin/*
